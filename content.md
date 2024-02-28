@@ -4,6 +4,10 @@ Green: Represents freshness, growth, and the natural environment.
 Yellow: Symbolizes sunshine, energy, and happiness.
 Brown: Evokes earthiness, stability, and the richness of the soil.
 
+Green: Represents freshness, growth, and nature.
+Orange: Symbolizes warmth, energy, and vitality.
+Brown: Evokes earthiness, stability, and the richness of the soil.
+
 Categories
 
 1. **Oils:**
@@ -89,12 +93,13 @@ Training of upcoming farmers and also we learning more along the line ,at the en
 
 Including our various investments schemes where we have passive farmers who are also a part of the growing community (clementinasfarm)and our success story 😊😊
 
-## we offer a wide range of produce
+## we offer a wide range of products
 
 Alt: Discover Our Harvest
+Alt: Explore Our Fresh Selection
 
 [desc]
-cta: view all produce
+cta: view all produce / Explore Products
 
 ## customers favorite
 
@@ -104,6 +109,12 @@ cta: buy now
 ## we supply all kinds of produce
 
 [images] / [Text Carousel]
+[Instagram Embeds]
+
+Style:
+Sticky Scroll Reveal
+Layout Grid
+BentoGrid
 
 ## we guarantee
 
@@ -121,6 +132,7 @@ If for any reason you are not completely satisfied with your purchase, we guaran
 ## Show of from our customers ❤️
 
 Alt: What Our Customer Say ❤️
+Alt: Hear From Our Customers ❤️
 
 [short desc]
 [testimonial cards]

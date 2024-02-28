@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/shared/header";
+import Footer from "@/components/shared/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,7 +39,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={satoshi.className + " bg-background"}>{children}</body>
+      <body className={satoshi.className}>
+        <div className="bg-background max-w-[1440px] mx-auto ">
+          <Header />
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

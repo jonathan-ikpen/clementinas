@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
-    /* --background: 0 0% 100%; */
+    --backgroundf: 0 0% 100%;
     --background: 39 100% 97%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
@@ -56,4 +56,77 @@
     --input: 12 6.5% 15.1%;
     --ring: 20.5 90.2% 48.2%;
   }
+} */
+
+@layer base {
+  :root {
+    --background: 268 35% 98%;
+    /* --backgroundf: 39 100% 97%; */
+    --foreground: 268 52% 3%;
+    --muted: 28 34% 85%;
+    --muted-foreground: 28 4% 31%;
+    --popover: 268 35% 97%;
+    --popover-foreground: 268 52% 2%;
+    --card: 268 35% 97%;
+    --card-foreground: 268 52% 2%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --primary: 268 37% 48%;
+    --primary-foreground: 0 0% 100%;
+    /* --secondary: 28 37% 48%; */
+    --secondary: 29 94% 41%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 148 37% 48%;
+    --accent-foreground: 148 37% 8%;
+    --destructive: 13 98% 37%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 268 37% 48%;
+    --radius: 0.5rem;
+    --font-satoshi: "Satoshi";
+    --font-inter: "Inter";
+    --black: #121212;
+    --text: #444;
+    --indigo: #540068;
+    --indigo-hover: #33003f;
+    --stroke: #a3a3a3;
+    --white: white;
+  }
+
+  .dark {
+    --background: 268 59% 2%;
+    --foreground: 268 29% 98%;
+    --muted: 28 34% 15%;
+    --muted-foreground: 28 4% 69%;
+    --popover: 268 59% 3%;
+    --popover-foreground: 268 29% 99%;
+    --card: 268 59% 3%;
+    --card-foreground: 268 29% 99%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --primary: 268 37% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 28 37% 48%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 148 37% 48%;
+    --accent-foreground: 148 37% 8%;
+    --destructive: 13 98% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 268 37% 48%;
+  }
+}
+
+.section {
+  @apply pt-28 md:pt-60 px-10 md:px-24;
+}
+
+.heading-1 {
+  @apply scroll-m-20 text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-black;
+}
+
+.paragraph-1 {
+  @apply text-[16px] md:text-[18px];
+}
+
+.paragraph-2 {
+  @apply text-[14px] md:text-[18px] mt-6 md:mt-10;
 }
