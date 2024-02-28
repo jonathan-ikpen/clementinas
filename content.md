@@ -129,6 +129,15 @@ We believe in offering the best value for money, which is why we guarantee compe
 **Easy Returns**
 If for any reason you are not completely satisfied with your purchase, we guarantee an easy and hassle-free return process.
 
+- Fast Shipping
+- Return Policy
+- Online Support
+- Smart Discount
+
+100% Fresh Products
+Fast Delivery
+100% Fresh Organic Fruits
+
 ## Show of from our customers ❤️
 
 Alt: What Our Customer Say ❤️

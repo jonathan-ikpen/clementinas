@@ -65,6 +65,11 @@ const Card = ({
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   const variants = {
     visible: { opacity: 1, y: 0 },
@@ -97,7 +102,7 @@ const Card = ({
       animate={controls}
       initial="hidden"
       //   variants={variants}
-      variants={window.innerWidth < 768 ? variantsMobile : variantsDesktop}
+      variants={isMobile ? variantsMobile : variantsDesktop}
       transition={transition}
       className="flex flex-col justify-center items-center gap-4 rounded-2xl bg-white border border-transparent dark:border-white/[0.2] dark:bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] px-2 py-4 space-x-4"
     >
