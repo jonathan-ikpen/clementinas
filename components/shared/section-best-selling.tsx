@@ -43,7 +43,7 @@ const BestSellers = () => {
   return (
     <section className="section flex flex-col gap-16">
       <h1 className="heading-1 text-center">Best Sellers</h1>
-      <div className="grid justify-items-center grid-cols-2 fmd:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid justify-items-center grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-10">
         {products.map((product, index) => (
           <ProductCard key={index} delay={index * 0.2} {...product} />
         ))}

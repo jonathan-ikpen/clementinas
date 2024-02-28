@@ -1,11 +1,9 @@
 "use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { SecondaryButton } from "./custom-button";
 import { cn } from "@/lib/utils";
 
-const Header = ({
+const DesktopHeader = ({
   color,
   className,
 }: {
@@ -15,7 +13,7 @@ const Header = ({
   return (
     <div
       className={cn(
-        "px-7 sm:px-10 md:px-24 flex justify-between items-center py-4",
+        "hidden px-5 sm:px-10 md:px-24 md:flex justify-between items-center py-4",
         className
       )}
     >
@@ -36,4 +34,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export default DesktopHeader;

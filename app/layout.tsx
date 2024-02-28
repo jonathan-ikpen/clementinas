@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
+import MobileHeaderNav from "@/components/shared/mobile-nav";
+import DesktopHeader from "@/components/shared/desktop-header";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+// import { Inter } from "next/font/google";
 
 const satoshi = localFont({
   src: [
@@ -39,9 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={satoshi.className}>
-        <div className="bg-background max-w-[1440px] mx-auto ">
-          <Header />
+      <body className={satoshi.className + "overflow-x-hidden "}>
+        <div className="bg-background w-full max-w-[1440px] mx-auto overflow-x-hidden">
+          <DesktopHeader />
+          <MobileHeaderNav />
           {children}
         </div>
         <Footer />

@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/cn";
 import Link from "next/link";
 
-export const FloatingNav = ({
+const FloatingNav = ({
   navItems,
   className,
 }: {
@@ -83,3 +83,5 @@ export const FloatingNav = ({
     </AnimatePresence>
   );
 };
+
+export default FloatingNav;
