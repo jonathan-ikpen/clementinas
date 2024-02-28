@@ -16,7 +16,7 @@ const BestSellers = () => {
       price: "1,500",
     },
     {
-      name: "Edible Worm & Tapioca",
+      name: "Worm & Tapioca",
       src: "/products/edible-worm-tapioca.png",
       piece: "10 Qty +",
       price: "5,500",

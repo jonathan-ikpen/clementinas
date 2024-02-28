@@ -120,11 +120,11 @@ const ProductCard = ({
         // className="max-w-full"
       />
       <div>
-        <h4 className="scroll-m-20 text-2xl md:text-3xl font-extrabold tracking-tight">
+        <h4 className="fscroll-m-20 text-2xl md:text-3xl font-extrabold tracking-tight">
           {name}
         </h4>
       </div>
-      <div className="flex gap-8 mt-4">
+      <div className="flex gap-4 mt-2">
         <p className="leading-7 text-xl [&:not(:first-child)]:mt-6">₦{price}</p>
         <PieceTag pieces={piece} />
       </div>
