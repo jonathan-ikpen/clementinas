@@ -7,6 +7,7 @@ import SectionCustomerReviews from "@/components/shared/section-customer-reviews
 import SectionFaq from "@/components/shared/section-faq";
 import SectionCta from "@/components/shared/section-cta";
 
+import AnnouncementBar from "@/components/shared/announcement-bar";
 import FloatingNav from "@/components/ui/floating-navbar";
 import SectionNewsletter from "@/components/shared/section-newsletter";
 import InstagramEmbeds from "@/components/shared/section-instagram-embed";

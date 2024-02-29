@@ -38,8 +38,8 @@ const SectionCustomerReviews = () => {
       <div>
         <h1 className="heading-1 text-center">What Our Customers Say 💚</h1>
         <p className="paragraph-2 md:px-72 text-center">
-          From fresh fruits to crisp veggies, we serve to meet your cravings and
-          give you maximum satisfaction while doing so.
+          All foodstuffs from fresh fruits to crisp veggies, we serve to meet
+          your cravings and give you maximum satisfaction while doing so.
         </p>
       </div>
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

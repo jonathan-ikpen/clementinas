@@ -130,3 +130,21 @@
 .paragraph-2 {
   @apply text-[14px] md:text-[18px] mt-6 md:mt-10;
 }
+
+.marquee {
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-none {
+  animation: none;
+}

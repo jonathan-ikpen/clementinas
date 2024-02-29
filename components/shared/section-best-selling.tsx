@@ -5,37 +5,37 @@ const BestSellers = () => {
   const products = [
     {
       name: "Palm Oil",
-      src: "/products/palm-oil.svg",
+      src: "/products/palm-oil-2.svg",
       piece: "10 Qty +",
       price: "2,500",
     },
     {
       name: "Pumpkin Leaf",
-      src: "/products/pumpkin-leaf.svg",
+      src: "/products/pumpkin-leaf-2.svg",
       piece: "10 Qty +",
       price: "1,500",
     },
     {
       name: "Worm & Tapioca",
-      src: "/products/edible-worm-tapioca.png",
+      src: "/products/edible-worm-tapioca-2.png",
       piece: "10 Qty +",
       price: "5,500",
     },
     {
       name: "Cray Fish",
-      src: "/products/cray-fish.png",
+      src: "/products/cray-fish-2.svg",
       piece: "10 Qty +",
       price: "1,500",
     },
     {
       name: "Yam",
-      src: "/products/yam.png",
+      src: "/products/yam-2.svg",
       piece: "10 Qty +",
       price: "10,500",
     },
     {
       name: "Prawn",
-      src: "/products/prawn.png",
+      src: "/products/prawn-2.svg",
       piece: "10 Qty +",
       price: "4,500",
     },

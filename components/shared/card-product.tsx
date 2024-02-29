@@ -104,7 +104,7 @@ const ProductCard = ({
 
   return (
     <motion.div
-      className="flex flex-col gap-4 w-fit"
+      className="flex flex-col gap-2 md:gap-4 w-fit"
       ref={ref}
       animate={controls}
       initial="hidden"
@@ -120,18 +120,20 @@ const ProductCard = ({
         // className="max-w-full"
       />
       <div>
-        <h4 className="fscroll-m-20 text-2xl md:text-3xl font-extrabold tracking-tight">
+        <h4 className="fscroll-m-20 pl-2 md:pl-8 text-lg md:text-3xl font-extrabold tracking-tight">
           {name}
         </h4>
       </div>
-      <div className="flex gap-4 mt-2">
-        <p className="leading-7 text-xl [&:not(:first-child)]:mt-6">₦{price}</p>
+      <div className="flex pl-2 md:pl-8 gap-4 mt-2">
+        <p className="leading-7 text-sm md:text-xl [&:not(:first-child)]:mt-6">
+          ₦{price}
+        </p>
         <PieceTag pieces={piece} />
       </div>
       <div className="w-full">
         <SecondaryButton
           variant="outline"
-          className="mt-2 px-4 py-6 text-[14px] md:text-[16px] md:px-16 md:py-8"
+          className="mt-2 px-2 py-6 text-[14px] md:text-[16px] md:px-16 md:py-8"
         >
           Buy Now
         </SecondaryButton>

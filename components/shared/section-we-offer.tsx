@@ -15,7 +15,7 @@ const SectionWeOffer = () => {
       </div>
       <div className="flex-1 flex flex-col gap-16">
         <h1 className="heading-1">
-          we offer a wide range of produce
+          we offer a wide range of foodstuffs
           <Image
             src="/fruit6.png"
             width={70}
@@ -26,10 +26,10 @@ const SectionWeOffer = () => {
         </h1>
         <div className="paragraph-1">
           <p>
-            From fresh fruits to crisp veggies, we&apos;ve got your cravings
-            covered with our wide range of farm goodies. Whether you&apos;re
-            after juicy strawberries or crunchy carrots, we&apos;ve got
-            something for everyone.
+            From fresh fruits to crisp veggies to poultry to fishery, we&apos;ve
+            got your cravings covered with our wide range of farm goodies.
+            Whether you&apos;re after juicy strawberries or crunchy carrots,
+            we&apos;ve got something for everyone.
           </p>
           <p className="mt-10">
             So, take a peek at our selection and fill your basket with the

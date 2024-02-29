@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/shared/footer";
 import MobileHeaderNav from "@/components/shared/mobile-nav";
 import DesktopHeader from "@/components/shared/desktop-header";
+import AnnouncementBar from "@/components/shared/announcement-bar";
 
 // const inter = Inter({ subsets: ["latin"] });
 // import { Inter } from "next/font/google";
@@ -42,6 +43,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={satoshi.className + "overflow-x-hidden "}>
         <div className="bg-background w-full max-w-[1440px] mx-auto overflow-x-hidden">
+          <AnnouncementBar
+            message={"Next delivery of StrawBerry is monday, start"}
+            discount={"booking now"}
+            button={"buy now"}
+            link={"/store"}
+            display
+          />
           <DesktopHeader />
           <MobileHeaderNav />
           {children}

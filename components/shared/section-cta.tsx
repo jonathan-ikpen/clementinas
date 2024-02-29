@@ -17,7 +17,7 @@ export default function SectionCta() {
           </div>
           <div className=" text-white md:px-10">
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-8xl text-center text-white">
-              Fresh Produce Available Now!
+              New Hot Stocks Available Now!
             </h1>
           </div>
           <div className="w-full flex justify-center items-center">
