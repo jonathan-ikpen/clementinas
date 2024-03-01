@@ -4,11 +4,11 @@ import { SecondaryButton } from "./custom-button";
 export default function SectionCta() {
   return (
     <section className="section pb-28 md:pb-60">
-      <div className="fbg-[#9f4e03] bg-[#CC6606] p-10 md:p-24 rounded-[30px] ">
+      <div className="fbg-[#9f4e03] fbg-[#CC6606] bg-primary p-10 md:p-24 rounded-[30px] ">
         <div className="max-w-4xl mx-auto flex flex-col justify-center items-center gap-10">
           <div className="">
             <Image
-              src={"/logo-tint.svg"}
+              src={"/logo-tint-green.svg"}
               width={200}
               height={200}
               alt="logo text-accent"

@@ -15,7 +15,7 @@ const Header = ({
   return (
     <div
       className={cn(
-        "px-7 sm:px-10 md:px-24 flex justify-between items-center py-4",
+        "px-6 sm:px-10 md:px-24 flex justify-between items-center py-4",
         className
       )}
     >

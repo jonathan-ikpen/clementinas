@@ -15,10 +15,13 @@ export default function AnnouncementBar({
   display?: true;
 }) {
   return (
-    <div className={`ffixed inset-x-0 top-0 z-50 ${display ? "" : "hidden"}`}>
-      <div className="bg-primary">
-        <div className="marquee md:animate-none mx-auto max-w-7xl pb-3 md:py-3 px-3 sm:px-6 lg:px-8">
-          <div className="flex text-sm md:text-lg items-center flex-row justify-center">
+    <Link
+      href={link}
+      className={`ffixed inset-x-0 top-0 z-50 ${display ? "" : "hidden"}`}
+    >
+      <div className="bg-accent">
+        <div className="marquee md:animate-none mx-auto max-w-7xl py-1 md:py-3 px-3 sm:px-6 lg:px-8">
+          <div className="flex w-fit mx-auto text-sm md:text-lg items-center flex-row justify-center">
             <div className="flex flex-1 items-center justify-center mr-3 lg:flex-none">
               <p className="ml-3 text-center font-medium text-white">
                 <svg
@@ -40,7 +43,7 @@ export default function AnnouncementBar({
                 <span className="font-black">{discount}</span>
               </p>
             </div>
-            <div className="mt-2 fw-full flex-shrink-0 lg:mt-0 lg:w-auto">
+            <div className="mt-2 fw-full hidden md:block flex-shrink-0 lg:mt-0 lg:w-auto">
               <Link
                 href={link}
                 className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-1 text-sm font-medium text-black shadow-sm hover:bg-teal-50"
@@ -51,6 +54,6 @@ export default function AnnouncementBar({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -44,8 +44,10 @@ export default function RootLayout({
       <body className={satoshi.className + "overflow-x-hidden "}>
         <div className="bg-background w-full max-w-[1440px] mx-auto overflow-x-hidden">
           <AnnouncementBar
-            message={"Next delivery of StrawBerry is monday, start"}
-            discount={"booking now"}
+            message={
+              "Next delivery of StrawBerry is monday, click anywhere here to"
+            }
+            discount={"book now"}
             button={"buy now"}
             link={"/store"}
             display

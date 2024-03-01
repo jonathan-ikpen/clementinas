@@ -6,7 +6,7 @@ import Socials from "./socials";
 
 export default function Footer() {
   return (
-    <footer className="py-28 md:py-40 px-7 sm:px-10 md:px-24 bg-black text-white flex flex-col gap-20 justify-between md:flex-row">
+    <footer className="py-28 md:py-40 px-6 sm:px-10 md:px-24 bg-black text-white flex flex-col gap-20 justify-between md:flex-row">
       <div className="text-[14px] text-[#a09fa7] flex flex-col gap-4">
         <Image src={"/logo-white.svg"} width={130} height={130} alt="logo" />
         <p className="mt-4">Copyright © 2024 Clementinas Farm</p>

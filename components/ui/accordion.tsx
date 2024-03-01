@@ -40,7 +40,7 @@ const AccordionTrigger = React.forwardRef<
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          "flex flex-1 items-center data-[state=open]:bg-white data-[state=open]:text-secondary justify-between py-4 font-medium transition-all",
+          "flex flex-1 items-center data-[state=open]:bg-white data-[state=open]:text-primary justify-between py-4 font-medium transition-all",
           className,
           { "[&[data-state=open]>svg]:rotate-180": isOpen } // Conditionally add rotate-180 class if accordion is open
         )}

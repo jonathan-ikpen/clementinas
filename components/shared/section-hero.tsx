@@ -3,7 +3,7 @@ import { SecondaryButton } from "./custom-button";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:gap-8 md:pt-32 px-7 sm:px-10 md:px-24 pt-20 relative">
+    <section className="flex flex-col md:gap-8 md:pt-32 px-6 sm:px-10 md:px-24 pt-20 relative">
       <Heading1 className="hidden sm:flex" />
       <Heading2 className="flex sm:hidden md:hidden lg:hidden" />
       <div className="mt-8 md:mt-0 max-w-3xl text-[21px]">
