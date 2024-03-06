@@ -11,12 +11,12 @@ export default function SectionFaq() {
     {
       value: "item-1",
       question: "What types of produce do you offer?",
-      answer: "We offer a wide range of products.",
+      answer: "We offer different varieties of foodstuffs.",
     },
     {
       value: "item-2",
       question: "Do you sell in bulk?",
-      answer: "Yes, we sell in bulk.",
+      answer: "Yes, we offer wholesale deals too and reseller packages.",
     },
     {
       value: "item-3",
@@ -36,17 +36,23 @@ export default function SectionFaq() {
     {
       value: "item-6",
       question: "What is the minimum order requirement?",
-      answer: "Varies base on product. Please contact us to find out more.",
+      answer: "Varies base on product. There is something for every budget",
     },
-    // {
-    //   value: "item-7",
-    //   question: "How do I pay for my order?",
-    //   answer: "We accept cash on delivery.",
-    // },
+    {
+      value: "item-7",
+      question: "How do I pay for my order?",
+      answer: "We accept card, bank transfer and bitcoin.",
+    },
+    {
+      value: "item-14",
+      question: "Do you ship food items to other countries?",
+      answer: "Yes we do. please contact us on whatsapp for more information.",
+    },
     {
       value: "item-8",
       question: "How long will it take to recieve my order?",
-      answer: "We usually recieve your order within 2-3 days.",
+      answer:
+        "Within Nigeria 24hrs to 3days, outside Nigeria it depends on the shipping company used.please contact us for more information.",
     },
     {
       value: "item-9",
@@ -54,19 +60,15 @@ export default function SectionFaq() {
       answer: "Yes, we offer discounts for large orders.",
     },
     {
-      value: "item-10",
-      question: "Do you have a return policy?",
-      answer: "Yes, we offer a 30-day return policy.",
+      value: "item-11",
+      question: "How can i place an order?",
+      answer:
+        "You can place your order here on our website, instagram or whatsapp.",
     },
-    // {
-    //     value: "item-11",
-    //   question: "How can i place an order?",
-    //   answer: "Please contact us for custom packages.",
-    // },
     {
       value: "item-12",
       question: "Do you deliver to my area?",
-      answer: "Yes, we deliver to your area.",
+      answer: "Yes, we deliver nationwide and overseas.",
     },
     {
       value: "item-13",

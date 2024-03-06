@@ -4,12 +4,14 @@ import { SecondaryButton } from "./custom-button";
 const Hero = () => {
   return (
     <section className="flex flex-col md:gap-8 md:pt-32 px-6 sm:px-10 md:px-24 pt-20 relative">
-      <Heading1 className="hidden sm:flex" />
-      <Heading2 className="flex sm:hidden md:hidden lg:hidden" />
+      <Heading1 className="hidden fsm:flex" />
+      <Heading2 className="fflex sm:hidden md:hidden lg:hidden" />
+      <Heading3 className="" />
       <div className="mt-8 md:mt-0 max-w-3xl text-[21px]">
         <p className="paragraph-1">
-          Explore a farm-fresh paradise. From crisp veggies to juicy fruits,
-          we&apos;ve got the flavors you crave. Sit tight, unwind, and savor the
+          Explore a wide-range of farm fresh paradise. From crisp vegetables to
+          juicy fruits, to sea food, we&apos;ve got the flavors you crave. Sit
+          tight, unwind, get delivered to your doorstep while you savor the
           freshness.
         </p>
       </div>
@@ -76,6 +78,40 @@ const Heading2 = ({ className }: { className?: string }) => {
       <div className="flex items-center flex-wrap">
         <h1 className="scroll-m-20 text-7xl text-black font-extrabold tracking-tight md:text-8xl lg:text-9xl">
           Enjoy
+        </h1>
+        <Image
+          src="/eat1.gif"
+          width={100}
+          height={100}
+          alt="R"
+          className="mx-6 rounded-full h-[50px] w-[100px] md:h-[70px] md:w-[150px] lg:h-[100px] lg:w-[200px]"
+        />
+      </div>
+    </div>
+  );
+};
+
+const Heading3 = ({ className }: { className?: string }) => {
+  return (
+    <div className={`${className} leading-10 flex flex-col md:gap-8`}>
+      <div className="flex items-center flex-wrap">
+        <h1 className="scroll-m-20 text-6xl text-black font-extrabold tracking-tight md:text-8xl lg:text-9xl">
+          Fresh
+        </h1>
+        <Image
+          src="/R.gif"
+          width={100}
+          height={100}
+          alt="R"
+          className="mx-6 rounded-full h-[50px] w-[100px] md:h-[70px] md:w-[150px] lg:h-[100px] lg:w-[200px]"
+        />
+        <h1 className="scroll-m-20 text-6xl text-black font-extrabold tracking-tight md:text-8xl lg:text-9xl">
+          from Our Farms
+        </h1>
+      </div>
+      <div className="flex items-center flex-wrap">
+        <h1 className="scroll-m-20 text-6xl text-black font-extrabold tracking-tight md:text-8xl lg:text-9xl">
+          for you to enjoy
         </h1>
         <Image
           src="/eat1.gif"

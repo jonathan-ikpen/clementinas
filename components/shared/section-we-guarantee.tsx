@@ -22,23 +22,17 @@ const SectionWeGuarantee = () => {
       index: 2,
       title: "Fresh",
       description: "We guarantee fresh fruits",
-      src: "/support.png",
+      src: "/guarantee/fresh-food.gif",
     },
     {
       index: 3,
       title: "Delivery",
       description: "We guarantee the best delivery",
-      src: "/delivery.png",
-    },
-    {
-      index: 4,
-      title: "Return",
-      description: "We guarantee the best return",
-      src: "/return.png",
+      src: "/guarantee/rice.jpg",
     },
   ];
   return (
-    <section className="section mb-28 md:mb-60 flex flex-col gap-16">
+    <section className="section mb-28 md:mb-60 flex flex-col gap-10">
       <h1 className="heading-1 text-center">We Guarantee</h1>
       {/* <p className="paragraph-1"></p> */}
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -104,9 +98,17 @@ const Card = ({
       //   variants={variants}
       variants={isMobile ? variantsMobile : variantsDesktop}
       transition={transition}
-      className="flex flex-col justify-center items-center gap-4 rounded-2xl bg-white border border-transparent dark:border-white/[0.2] dark:bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] px-2 py-4 space-x-4"
+      className="flex flex-col justify-center items-center gap-4 rounded-2xl bg-white border border-transparent dark:border-white/[0.2] dark:bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] fpx-2 pb-4 space-x-4 overflow-hidden"
     >
-      <Image src={src} width={100} height={100} alt={title} />
+      <div className="w-full h-40">
+        <Image
+          src={src}
+          width={100}
+          height={100}
+          alt={title}
+          className="object-cover w-full h-full"
+        />
+      </div>
       <h3 className="text-2xl md:text-3xl font-extrabold">{title}</h3>
       <p>{description}</p>
     </motion.div>
