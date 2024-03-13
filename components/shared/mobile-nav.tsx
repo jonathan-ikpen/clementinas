@@ -29,14 +29,14 @@ export default function MobileHeaderNav() {
           isMobileNavClicked && "!px-0"
         )}
       >
-        <div>
+        <Link href="/">
           <Image
             src={isMobileNavClicked ? "/logo-white.svg" : "/logo.svg"}
             width={80}
             height={80}
             alt="logo"
           />
-        </div>
+        </Link>
         <div className={cn("w-fit")} onClick={handleClick}>
           {!isMobileNavClicked && (
             <RxHamburgerMenu
