@@ -22,8 +22,8 @@ const SectionWeGuarantee = () => {
       description:
         "We guarantee top-notch quality in every bite. From farm to table, we meticulously select and inspect each product to ensure it meets our highest standards of freshness, taste, and nutritional value.",
       src: "/guarantee/tomatoe1.jpg",
-      icon: <MdGppGood color="#006400" className="w-12 h-12" />,
-      bgcolor: "bg-[#DFFF77]",
+      icon: <MdGppGood color="#006400" className="w-6 h-6" />,
+      bgcolor: "bg-[#DFFF97]",
     },
     {
       index: 1,
@@ -31,7 +31,7 @@ const SectionWeGuarantee = () => {
       description:
         "We guarantee competitive prices without compromising on quality. Enjoy great value for your money with our affordable range of farm-fresh products.",
       src: "/guarantee/quality-food2.jpeg",
-      icon: <TbTagStarred color="#222" className="w-12 h-12" />,
+      icon: <TbTagStarred color="#222" className="w-6 h-6" />,
       bgcolor: "bg-[#FAC5C1]",
     },
     {
@@ -40,7 +40,7 @@ const SectionWeGuarantee = () => {
       description:
         "We guarantee absolute freshness straight from the farm to your table. With our commitment to timely harvesting and efficient delivery, you can trust that every bite is bursting with flavor and vitality.",
       src: "/guarantee/fresh-food.gif",
-      icon: <PiPlantFill color="#006400" className="w-12 h-12" />,
+      icon: <PiPlantFill color="#006400" className="w-6 h-6" />,
       bgcolor: "bg-[#B8FBB6]",
     },
     {
@@ -49,12 +49,12 @@ const SectionWeGuarantee = () => {
       description:
         "We guarantee prompt and reliable delivery to your doorstep. Our efficient logistics ensure that your orders arrive fresh and on time, so you can enjoy the convenience of farm-fresh goodness without leaving your home.",
       src: "/guarantee/rice.jpg",
-      icon: <RiTimerFlashFill color="#006400" className="w-12 h-12" />,
+      icon: <RiTimerFlashFill color="#006400" className="w-6 h-6" />,
       bgcolor: "bg-[#f7f7f7]",
     },
   ];
   return (
-    <section className="section mb-28 md:mb-60 flex flex-col gap-10">
+    <section className="section mb-28 md:mb-60 flex flex-col gap-16">
       <h1 className="heading-1 text-center">We Guarantee</h1>
       {/* <p className="paragraph-1"></p> */}
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

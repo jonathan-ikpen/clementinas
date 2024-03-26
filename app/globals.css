@@ -124,6 +124,10 @@
   @apply pt-28 md:pt-60 px-6 sm:px-10 md:px-24;
 }
 
+.section-with-pb {
+  @apply pt-28 md:pt-60 pb-28 md:pb-60 px-6 sm:px-10 md:px-24;
+}
+
 .heading-1 {
   @apply scroll-m-20 text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl text-black;
 }
@@ -134,6 +138,10 @@
 
 .paragraph-2 {
   @apply text-[14px] md:text-[18px] mt-6 md:mt-10;
+}
+
+.brand-shadow {
+  @apply border-[1.5px] border-black shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0)] border-solid transition duration-1000 transform translate-x-0 hover:translate-y-[2px];
 }
 
 .marquee {

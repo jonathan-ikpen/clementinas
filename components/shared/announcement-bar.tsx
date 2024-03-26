@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function AnnouncementBar({
   message,
@@ -14,6 +15,7 @@ export default function AnnouncementBar({
   link: string;
   display?: true;
 }) {
+  const navigation = useRouter();
   return (
     <Link href={link}>
       <div className={`ffixed inset-x-0 top-0 z-50 ${display ? "" : "hidden"}`}>
@@ -42,12 +44,12 @@ export default function AnnouncementBar({
                 </p>
               </div>
               <div className="mt-2 fw-full hidden md:block flex-shrink-0 lg:mt-0 lg:w-auto">
-                <Link
-                  href={link}
+                <button
+                  onClick={() => navigation.push(link)}
                   className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-1 text-sm font-medium text-black shadow-sm hover:bg-teal-50"
                 >
                   {button}
-                </Link>
+                </button>
               </div>
             </div>
           </div>

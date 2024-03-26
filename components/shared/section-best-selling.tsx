@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ProductCard from "./card-product";
 
-const BestSellers = () => {
+const SectionBestSellers = () => {
   const products = [
     {
       name: "Palm Oil",
@@ -41,7 +41,7 @@ const BestSellers = () => {
     },
   ];
   return (
-    <section className="section flex flex-col gap-16">
+    <section className="section-with-pb flex flex-col gap-16">
       <h1 className="heading-1 text-center">Best Sellers</h1>
       <div className="grid justify-items-center grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-10">
         {products.map((product, index) => (
@@ -52,4 +52,4 @@ const BestSellers = () => {
   );
 };
 
-export default BestSellers;
+export default SectionBestSellers;

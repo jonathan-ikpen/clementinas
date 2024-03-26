@@ -26,6 +26,18 @@ const DesktopHeader = ({
           <Image src={"/logo-white.svg"} width={100} height={100} alt="logo" />
         )}
       </Link>
+      <div className="flex gap-20 paragraph-1">
+        <Link href="/about" className="hover:font-bold">
+          About Us
+        </Link>
+        <Link href="/ebook" className="hover:font-bold">
+          E-Book
+        </Link>
+        <Link href="/contact-us" className="hover:font-bold">
+          Contact Us
+        </Link>
+        {/* <Link href="/training" className="hover:font-bold">Training</Link> */}
+      </div>
       <div className="">
         <SecondaryButton variant="secondary" className="w-fit">
           View Store
