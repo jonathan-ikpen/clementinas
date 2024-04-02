@@ -27,13 +27,13 @@ const DesktopHeader = ({
         )}
       </Link>
       <div className="flex gap-20 paragraph-1">
-        <Link href="/about" className="hover:font-bold">
+        <Link href="/about-us" className="hover:font-bold">
           About Us
         </Link>
         <Link href="/ebook" className="hover:font-bold">
           E-Book
         </Link>
-        <Link href="/contact-us" className="hover:font-bold">
+        <Link href="/contact" className="hover:font-bold">
           Contact Us
         </Link>
         {/* <Link href="/training" className="hover:font-bold">Training</Link> */}

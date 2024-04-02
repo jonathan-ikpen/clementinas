@@ -236,3 +236,25 @@ rice
 
 newsletter subscribe
 footer
+
+<!-- About - Us Page -->
+
+**Heading: Bringing joy and convenience through easy access to farm-fresh goodness**
+
+Clementinas Farm is your revolutionary online marketplace for all your fresh food needs, delivering a diverse range of high-quality produce right to your doorstep at unbeatable prices. We bring the farm to you, ensuring you have everything you need without ever leaving the comfort of your home.
+
+Whether it's a family dinner, a weekend barbecue, or a special celebration, having fresh ingredients is key to creating memorable meals and gatherings that bring people closer together.
+
+**Our Story**
+
+Our journey began in [insert founding year], driven by a passion for good food and shared moments. As avid food enthusiasts, we've experienced the frustration of not having access to quality ingredients when we need them most. Whether it's a spontaneous dinner with friends or a special family gathering, the lack of fresh produce can put a damper on the occasion.
+
+Determined to solve this problem, we set out to create Clementina's Farm – a place where you can easily access a wide range of farm-fresh products to elevate every meal and celebration. From vibrant fruits and vegetables to premium meats and pantry essentials, we're here to ensure that you never have to compromise on quality or taste.
+
+**Our Mission**
+
+At Clementina's Farm, our mission is simple: to provide you with the freshest, most flavorful produce, conveniently delivered to your doorstep. We believe that food has the power to bring joy and happiness to our lives, and we're committed to providing you with the freshest, most flavorful ingredients to enhance your culinary experiences.
+
+We strive to offer unparalleled convenience and accessibility, so you can spend less time worrying about shopping and more time enjoying delicious meals with your loved ones. With Clementina's Farm, you can trust that every bite will be a moment worth savoring.
+
+With Clementina's Farm, you can sit back, relax, and focus on creating unforgettable moments with your loved ones, knowing that the freshness of our produce will elevate every dish.

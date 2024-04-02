@@ -15,12 +15,12 @@ export default function Footer() {
       <div className="text-[16px] flex flex-col gap-6">
         <h4 className="text-white font-extrabold">Company</h4>
         <div className="text-[#a09fa7] flex flex-col gap-4">
-          <Link href="">About Us</Link>
-          <Link href="">Contact Us</Link>
-          <Link href="">Store</Link>
-          <Link href="">E-book</Link>
-          <Link href="">Training</Link>
-          <Link href="">Investment</Link>
+          <Link href="/about-us">About Us</Link>
+          <Link href="/contact">Contact Us</Link>
+          <Link href="/store">Store</Link>
+          <Link href="/ebook">E-book</Link>
+          <Link href="/training">Training</Link>
+          <Link href="/investment">Investment</Link>
         </div>
       </div>
       <div className="text-[16px] flex flex-col gap-6">
