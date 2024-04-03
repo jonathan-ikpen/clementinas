@@ -40,7 +40,7 @@ const SectionImageRows = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 mt-20 md:grid-cols-2 gap-20 md:items-stretch">
-          <div className="flex flex-col gap-10 justify-between">
+          <div className="flex flex-col order-2 md:order-1 gap-10 justify-between">
             <h2 className="heading-1">Our Mision</h2>
             <p className="paragraph-1">
               Clementinasfarm was built on the fresh food lifestyle, hence our
@@ -62,7 +62,7 @@ const SectionImageRows = () => {
               sustainability. 😊😊
             </p>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-md flex-shrink-0">
+          <div className="overflow-hidden order-1 md:order-2 rounded-2xl shadow-md flex-shrink-0">
             <Image
               src={Image4}
               alt="Crabs"

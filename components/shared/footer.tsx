@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="text-[16px] flex flex-col gap-6">
         <h4 className="text-white font-extrabold">Company</h4>
         <div className="text-[#a09fa7] flex flex-col gap-4">
-          <Link href="/about-us">About Us</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
           <Link href="/store">Store</Link>
           <Link href="/ebook">E-book</Link>

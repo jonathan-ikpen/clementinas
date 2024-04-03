@@ -63,7 +63,7 @@ export default function MobileHeaderNav() {
       >
         <div className="flex flex-col gap-8">
           <div className="text-[#fff] flex flex-col gap-8">
-            <Link href="/about-us">About Us</Link>
+            <Link href="/about">About Us</Link>
             <Link href="/contact">Contact Us</Link>
             <Link href="/ebook">E-Book</Link>
             <Link href="/training">Training</Link>
