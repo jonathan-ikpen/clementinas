@@ -15,6 +15,10 @@ export default function MobileHeaderNav() {
     setIsMobileNavClicked((prev) => !prev);
   };
 
+  const closeNav = () => {
+    setIsMobileNavClicked(false);
+  };
+
   return (
     <div
       className={
@@ -63,10 +67,18 @@ export default function MobileHeaderNav() {
       >
         <div className="flex flex-col gap-8">
           <div className="text-[#fff] flex flex-col gap-8">
-            <Link href="/about">About Us</Link>
-            <Link href="/contact">Contact Us</Link>
-            <Link href="/ebook">E-Book</Link>
-            <Link href="/training">Training</Link>
+            <Link href="/about" onClick={closeNav}>
+              About Us
+            </Link>
+            <Link href="/contact" onClick={closeNav}>
+              Contact Us
+            </Link>
+            <Link href="/ebook" onClick={closeNav}>
+              E-Book
+            </Link>
+            <Link href="/training" onClick={closeNav}>
+              Training
+            </Link>
             <Socials />
           </div>
         </div>
