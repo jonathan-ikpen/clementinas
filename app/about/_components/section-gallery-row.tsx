@@ -7,9 +7,9 @@ import Image4 from "@/public/about-us/cherry.jpeg";
 const SectionGalleryeRow = () => {
   return (
     <section className="section-with-small-py">
-      <div className="container h-[800px] lg:h-[550px]  mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-20">
-        <div className="row overflow-hidden flex flex-col flex-wrap gap-4">
-          <div className="column flex-[50%] max-w-[50%]">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row gap-20">
+        <div className="frow md:flex-[50%] overflow-hidden w-full flex flex-wrap gap-4">
+          <div className="fcolumn flex-[20%]">
             <div className=" h-72 overflow-hidden rounded-2xl shadow-md">
               <Image
                 src={Image2}
@@ -25,7 +25,7 @@ const SectionGalleryeRow = () => {
               />
             </div>
           </div>
-          <div className="column flex-[50%] max-w-[50%]">
+          <div className="fcolumn flex-[40%]">
             <div className="h-96 overflow-hidden rounded-2xl shadow-md">
               <Image
                 src={Image1}
@@ -42,7 +42,7 @@ const SectionGalleryeRow = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-10 justify-center">
+        <div className="md:flex-[50%] flex flex-col gap-10 justify-center">
           <h2 className="heading-1 font-bold mb-6">
             Bringing joy and convenience through easy access to farm-fresh
             goodness

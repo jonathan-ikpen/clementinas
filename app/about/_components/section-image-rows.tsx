@@ -39,7 +39,7 @@ const SectionImageRows = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 mt-20 md:grid-cols-2 gap-20 md:items-stretch">
+        <div className="grid grid-cols-1 mt-10 md:mt-20 md:grid-cols-2 gap-20 md:items-stretch">
           <div className="flex flex-col order-2 md:order-1 gap-10 justify-between">
             <h2 className="heading-1">Our Mision</h2>
             <p className="paragraph-1">
