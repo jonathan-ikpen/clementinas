@@ -148,6 +148,10 @@
   @apply scroll-m-20 text-xl font-extrabold tracking-tight sm:text-2xl lg:text-5xl text-black;
 }
 
+.heading-4 {
+  @apply scroll-m-20 text-lg font-extrabold tracking-tight sm:text-xl lg:text-3xl text-black;
+}
+
 .paragraph-1 {
   @apply text-[16px] md:text-[18px];
 }
@@ -158,6 +162,10 @@
 
 .brand-shadow {
   @apply border-[1.5px] border-black shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0)] border-solid transition duration-1000 transform translate-x-0 hover:translate-y-[2px];
+}
+
+.truncate-text {
+  @apply overflow-hidden text-ellipsis max-w-[calc(100%-1em)];
 }
 
 .marquee {

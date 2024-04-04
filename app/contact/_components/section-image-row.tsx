@@ -5,8 +5,6 @@ import Image2 from "@/public/about-us/farmer-girl.jpg";
 import { SecondaryButton } from "@/components/shared/custom-button";
 import { FaWhatsapp } from "react-icons/fa";
 
-import React from "react";
-
 const SectionImageRow = () => {
   return (
     <section className="section-with-small-py">

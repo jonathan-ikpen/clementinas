@@ -40,7 +40,8 @@ export const SecondaryButton = ({
         (variant === "secondary" &&
           "fbg-[#CC6606] bg-primary hover:bg-accent text-white") ||
         (variant === "secondary-link" && "bg-muted text-black") ||
-        (variant === "outline" && "text-black")
+        (variant === "outline" && "text-black") ||
+        (variant === "link" && "text-black")
       } ${className}`}
       {...props}
     >
