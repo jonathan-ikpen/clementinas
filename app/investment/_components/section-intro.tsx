@@ -6,8 +6,12 @@ const SectionIntro = () => {
   return (
     <section className="section-with-small-py">
       <div className="flex md:flex-row flex-col gap-20">
-        <div className="overflow-hidden h-80 flex-grow-0 flex-shrink-0 md:h-full md:flex-[30%] md:flex-shrink rounded-2xl shadow-md ">
-          <Image src={Image1} alt="Happy Investor" className="w-full" />
+        <div className="overflow-hidden fh-80 flex-grow-0 flex-shrink-0 h-full md:flex-[30%] md:flex-shrink rounded-2xl shadow-md ">
+          <Image
+            src={Image1}
+            alt="Happy Investor"
+            className="w-full object-cover"
+          />
         </div>
         <div className="flex flex-col justify-center flex-[50%] gap-10">
           <h2 className="heading-2">
