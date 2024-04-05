@@ -50,7 +50,7 @@ const CardInfo = ({
           </div>
           <div className="flex flex-col gap-10 justify-center">
             <p className="text-5xl font-extrabold text-primary">₦{amount}</p>
-            <p className="text-5xl font-light">{roi}</p>
+            <p className="text-3xl font-light">{roi}</p>
           </div>
         </div>
         <div className="flex justify-between items-end">
@@ -61,7 +61,7 @@ const CardInfo = ({
           >
             {button}
           </Button>
-          <span className="text-gray-500">{date}</span>
+          <span className="text-xs md:text-sm text-gray-500">{date}</span>
         </div>
       </div>
     </div>
