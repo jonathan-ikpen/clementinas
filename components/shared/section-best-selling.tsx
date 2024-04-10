@@ -8,14 +8,14 @@ const SectionBestSellers = () => {
       src: "/products/palm-oil-2.svg",
       piece: "10 Qty +",
       price: "2,500",
-      link: "https://paystack.shop/cle-palm-oil",
+      link: "https://paystack.com/buy/cle-palm-oil",
     },
     {
       name: "Pumpkin Leaf",
       src: "/products/pumpkin-leaf-2.svg",
       piece: "10 Qty +",
       price: "1,500",
-      link: "https://paystack.shop/cle-ugwu",
+      link: "https://paystack.com/buy/cle-ugwu",
     },
     {
       name: "Worm & Tapioca",
@@ -29,21 +29,21 @@ const SectionBestSellers = () => {
       src: "/products/cray-fish-2.svg",
       piece: "10 Qty +",
       price: "1,500",
-      link: "https://paystack.shop/cle-cray-fish",
+      link: "https://paystack.com/buy/cle-cray-fish",
     },
     {
       name: "Yam",
       src: "/products/yam-2.svg",
       piece: "10 Qty +",
       price: "10,500",
-      link: "https://paystack.shop/cle-yam",
+      link: "https://paystack.com/buy/cle-yam",
     },
     {
       name: "Prawn",
       src: "/products/prawn-2.svg",
       piece: "10 Qty +",
       price: "4,500",
-      link: "https://paystack.shop/cle-prawn",
+      link: "https://paystack.com/buy/cle-prawn",
     },
   ];
   return (
