@@ -81,42 +81,42 @@ const CategoryContainer = ({
     {
       name: "Oils",
       src: "/categories/palm-oil.webp",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-oils",
     },
     {
       name: "Vegetables",
       src: "/categories/tomatoe1.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-vegetables",
     },
     {
       name: "Grains",
       src: "/categories/grains.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-grains",
     },
     {
       name: "Tubers",
       src: "/categories/tuber2.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-tubers",
     },
     {
       name: "Fruits",
       src: "/categories/cherry.jpeg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-fruits",
     },
     {
       name: "Meat",
       src: "/categories/snail.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-livestocks",
     },
     {
       name: "Poultry",
       src: "/categories/crab.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm-poultry",
     },
     {
       name: "Others",
       src: "/categories/palm.jpg",
-      link: "",
+      link: "https://paystack.shop/clementinas-farm",
     },
   ];
 

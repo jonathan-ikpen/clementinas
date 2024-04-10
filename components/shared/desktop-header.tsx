@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { SecondaryButton } from "./custom-button";
 import Link from "next/link";
@@ -30,7 +29,10 @@ const DesktopHeader = ({
         <Link href="/about" className="hover:font-bold">
           About Us
         </Link>
-        <Link href="/ebook" className="hover:font-bold">
+        <Link
+          href="https://paystack.shop/clementinas-farm-ebooks"
+          className="hover:font-bold"
+        >
           E-Book
         </Link>
         <Link href="/contact" className="hover:font-bold">
@@ -39,8 +41,8 @@ const DesktopHeader = ({
         {/* <Link href="/training" className="hover:font-bold">Training</Link> */}
       </div>
       <div className="">
-        <SecondaryButton variant="secondary" className="w-fit">
-          View Store
+        <SecondaryButton asChild variant="secondary" className="w-fit">
+          <Link href="https://paystack.shop/clementinas-farm">View Store</Link>
         </SecondaryButton>
       </div>
     </div>

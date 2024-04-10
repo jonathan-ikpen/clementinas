@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -97,8 +98,12 @@ export default function SectionFaq() {
         </Accordion>
       </div>
       <div className="w-full flex items-center justify-center mt-10">
-        <SecondaryButton variant="secondary-link" className="sm:w-fit w-full">
-          Got More Questions?
+        <SecondaryButton
+          asChild
+          variant="secondary-link"
+          className="sm:w-fit w-full"
+        >
+          <Link href="/contact">Got More Questions?</Link>
         </SecondaryButton>
       </div>
     </section>

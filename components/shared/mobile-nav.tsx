@@ -73,7 +73,10 @@ export default function MobileHeaderNav() {
             <Link href="/contact" onClick={closeNav}>
               Contact Us
             </Link>
-            <Link href="/ebook" onClick={closeNav}>
+            <Link
+              href="https://paystack.shop/clementinas-farm-ebooks"
+              onClick={closeNav}
+            >
               E-Book
             </Link>
             <Link href="/training" onClick={closeNav}>
@@ -84,7 +87,11 @@ export default function MobileHeaderNav() {
         </div>
         <div>
           <div className="w-full mb-40">
-            <SecondaryButton variant="secondary">Shop Now</SecondaryButton>
+            <SecondaryButton asChild variant="secondary">
+              <Link href="https://paystack.shop/clementinas-farm">
+                Shop Now
+              </Link>
+            </SecondaryButton>
           </div>
         </div>
       </div>

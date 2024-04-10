@@ -1,7 +1,13 @@
+import Link from "next/link"
+import { redirect } from "next/navigation";
 import Image from "next/image";
 import { SecondaryButton } from "./custom-button";
 
 export default function SectionCta() {
+  const handleStoreClick = () => {
+    redirect("https://paystack.shop/clementinas-farm");
+  };
+
   return (
     <section className="section pb-28 md:pb-60">
       <div className="fbg-[#9f4e03] fbg-[#CC6606] bg-primary p-10 md:p-24 rounded-[30px] ">
@@ -22,10 +28,13 @@ export default function SectionCta() {
           </div>
           <div className="w-full flex justify-center items-center">
             <SecondaryButton
+              asChild
               variant="outline"
               className="w-fit md:py-10 md:px-20 fbg-accent mt-0 mb-0"
             >
-              Start shoping
+              <Link href="https://paystack.shop/clementinas-farm">
+                Start shoping
+              </Link>
             </SecondaryButton>
           </div>
         </div>

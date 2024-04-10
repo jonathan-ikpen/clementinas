@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import PieceTag from "./tag-piece";
@@ -77,12 +78,14 @@ const ProductCard = ({
   piece,
   price,
   delay,
+  link,
 }: {
   src: string;
   name: string;
   piece: string;
   price: string;
   delay: number;
+  link: string;
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -132,10 +135,11 @@ const ProductCard = ({
       </div>
       <div className="w-full">
         <SecondaryButton
+          asChild
           variant="outline"
           className="mt-2 px-2 py-6 text-[14px] md:text-[16px] md:px-16 md:py-8"
         >
-          Buy Now
+          <Link href={link}>Buy Now</Link>
         </SecondaryButton>
       </div>
     </motion.div>
