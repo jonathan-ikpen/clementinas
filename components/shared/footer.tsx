@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="text-[#a09fa7] flex flex-col gap-4">
           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
-          <Link href="/store">Store</Link>
+          <Link href="https://paystack.shop/clementinas-farm">Store</Link>
           <Link href="/ebook">E-book</Link>
           <Link href="/training">Training</Link>
           <Link href="/investment">Investment</Link>

@@ -37,9 +37,11 @@ const SectionImageRow = () => {
             +234 703 282 1022
           </Link>
           <div className="sm:w-fit w-full">
-            <SecondaryButton variant="secondary">
-              <FaWhatsapp />
-              &nbsp;Chat us on Whatsapp
+            <SecondaryButton asChild variant="secondary">
+              <Link href="https://wa.link/ph0ihp">
+                <FaWhatsapp />
+                &nbsp;Chat us on Whatsapp
+              </Link>
             </SecondaryButton>
           </div>
         </div>
