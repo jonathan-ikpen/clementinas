@@ -1,3 +1,9 @@
 export default function Training() {
-  <main></main>;
+  return (
+    <main>
+      <div>
+        <h1>Still WOrking</h1>
+      </div>
+    </main>
+  );
 }
