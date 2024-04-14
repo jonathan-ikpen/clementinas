@@ -12,8 +12,12 @@ import AnnouncementBar from "@/components/shared/announcement-bar";
 import FloatingNav from "@/components/ui/floating-navbar";
 import SectionNewsletter from "@/components/shared/section-newsletter";
 import InstagramEmbeds from "@/components/shared/section-instagram-embed";
+import client from "@/tina/__generated__/client";
 
-export default function Home() {
+export default async function Home() {
+  const res = await client.queries.best_sellers({
+    relativePath: "palm_oil.json",
+  });
   const navItems = [
     {
       name: "About Us",
@@ -38,7 +42,11 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <SectionWeOffer />
-      <SectionBestSellers />
+      <SectionBestSellers
+        data={res.data}
+        variable={res.variables}
+        query={res.query}
+      />
       <SectionCategory />
       <SectionWeGuarantee />
       <SectionCustomerReviews />
