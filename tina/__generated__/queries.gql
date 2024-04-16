@@ -1,0 +1,52 @@
+query best_sellers($relativePath: String!) {
+  best_sellers(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Best_sellersParts
+  }
+}
+
+query best_sellersConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Best_sellersFilter) {
+  best_sellersConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Best_sellersParts
+      }
+    }
+  }
+}
