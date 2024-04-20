@@ -18,6 +18,7 @@ const SectionBestSellers = (props: {
     query: props.query,
   });
   const prod = [data.best_sellers.product];
+
   const products = [
     {
       name: "Palm Oil",

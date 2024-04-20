@@ -30,8 +30,8 @@
   "devDependencies": {
     "@tinacms/cli": "^1.5.43",
     "@types/node": "^20.12.7",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
     "autoprefixer": "^10.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8",
