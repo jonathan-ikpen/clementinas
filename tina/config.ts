@@ -81,6 +81,50 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "announcement",
+        label: "Announcement",
+        path: "content/announcement",
+        format: "json",
+        ui: {
+          router: (props) => {
+            return "/";
+          },
+        },
+        defaultItem: () => {
+          return {
+            // When a new post is created the title field will be set to "New post"
+            display: true,
+          };
+        },
+        fields: [
+          {
+            type: "string",
+            label: "Message",
+            name: "message",
+          },
+          {
+            type: "string",
+            label: "Discount or CTA",
+            name: "discount",
+          },
+          {
+            type: "string",
+            label: "Button Text",
+            name: "button",
+          },
+          {
+            type: "string",
+            label: "Button Link",
+            name: "link",
+          },
+          {
+            type: "boolean",
+            label: "Display",
+            name: "display",
+          },
+        ],
+      },
     ],
   },
 });
