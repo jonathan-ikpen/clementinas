@@ -2,8 +2,6 @@
 import Image from "next/image";
 import ProductCard from "./card-product";
 import {
-  ProductsQuery,
-  ProductsQueryVariables,
   Best_SellersQuery,
   Best_SellersQueryVariables,
 } from "../../tina/__generated__/types";
