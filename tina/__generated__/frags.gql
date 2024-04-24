@@ -1,12 +1,9 @@
 fragment Best_sellersParts on Best_sellers {
   __typename
-  product {
-    __typename
-    name
-    src
-    category
-    price
-    piece
-    link
-  }
+  name
+  src
+  category
+  price
+  piece
+  link
 }

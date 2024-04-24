@@ -86,17 +86,13 @@ type Collection {
 
 union DocumentNode = Best_sellers | Folder
 
-type Best_sellersProduct {
+type Best_sellers implements Node & Document {
   name: String
   src: String
   category: String
   price: String
   piece: String
   link: String
-}
-
-type Best_sellers implements Node & Document {
-  product: Best_sellersProduct
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -109,17 +105,20 @@ input StringFilter {
   in: [String]
 }
 
-input Best_sellersProductFilter {
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input Best_sellersFilter {
   name: StringFilter
-  src: StringFilter
+  src: ImageFilter
   category: StringFilter
   price: StringFilter
   piece: StringFilter
   link: StringFilter
-}
-
-input Best_sellersFilter {
-  product: Best_sellersProductFilter
 }
 
 type Best_sellersConnectionEdges {
@@ -151,17 +150,13 @@ input DocumentMutation {
   best_sellers: Best_sellersMutation
 }
 
-input Best_sellersProductMutation {
+input Best_sellersMutation {
   name: String
   src: String
   category: String
   price: String
   piece: String
   link: String
-}
-
-input Best_sellersMutation {
-  product: Best_sellersProductMutation
 }
 
 schema {

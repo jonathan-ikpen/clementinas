@@ -164,19 +164,14 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = Best_Sellers | Folder;
 
-export type Best_SellersProduct = {
-  __typename?: 'Best_sellersProduct';
+export type Best_Sellers = Node & Document & {
+  __typename?: 'Best_sellers';
   name?: Maybe<Scalars['String']['output']>;
   src?: Maybe<Scalars['String']['output']>;
   category?: Maybe<Scalars['String']['output']>;
   price?: Maybe<Scalars['String']['output']>;
   piece?: Maybe<Scalars['String']['output']>;
   link?: Maybe<Scalars['String']['output']>;
-};
-
-export type Best_Sellers = Node & Document & {
-  __typename?: 'Best_sellers';
-  product?: Maybe<Best_SellersProduct>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -189,17 +184,20 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type Best_SellersProductFilter = {
+export type ImageFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Best_SellersFilter = {
   name?: InputMaybe<StringFilter>;
-  src?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
   category?: InputMaybe<StringFilter>;
   price?: InputMaybe<StringFilter>;
   piece?: InputMaybe<StringFilter>;
   link?: InputMaybe<StringFilter>;
-};
-
-export type Best_SellersFilter = {
-  product?: InputMaybe<Best_SellersProductFilter>;
 };
 
 export type Best_SellersConnectionEdges = {
@@ -273,7 +271,7 @@ export type DocumentMutation = {
   best_sellers?: InputMaybe<Best_SellersMutation>;
 };
 
-export type Best_SellersProductMutation = {
+export type Best_SellersMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
   src?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
@@ -282,18 +280,14 @@ export type Best_SellersProductMutation = {
   link?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type Best_SellersMutation = {
-  product?: InputMaybe<Best_SellersProductMutation>;
-};
-
-export type Best_SellersPartsFragment = { __typename: 'Best_sellers', product?: { __typename: 'Best_sellersProduct', name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null } | null };
+export type Best_SellersPartsFragment = { __typename: 'Best_sellers', name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null };
 
 export type Best_SellersQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Best_SellersQuery = { __typename?: 'Query', best_sellers: { __typename: 'Best_sellers', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, product?: { __typename: 'Best_sellersProduct', name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null } | null } };
+export type Best_SellersQuery = { __typename?: 'Query', best_sellers: { __typename: 'Best_sellers', id: string, name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type Best_SellersConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -305,20 +299,17 @@ export type Best_SellersConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Best_SellersConnectionQuery = { __typename?: 'Query', best_sellersConnection: { __typename?: 'Best_sellersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Best_sellersConnectionEdges', cursor: string, node?: { __typename: 'Best_sellers', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, product?: { __typename: 'Best_sellersProduct', name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null } | null } | null } | null> | null } };
+export type Best_SellersConnectionQuery = { __typename?: 'Query', best_sellersConnection: { __typename?: 'Best_sellersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Best_sellersConnectionEdges', cursor: string, node?: { __typename: 'Best_sellers', id: string, name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const Best_SellersPartsFragmentDoc = gql`
     fragment Best_sellersParts on Best_sellers {
   __typename
-  product {
-    __typename
-    name
-    src
-    category
-    price
-    piece
-    link
-  }
+  name
+  src
+  category
+  price
+  piece
+  link
 }
     `;
 export const Best_SellersDocument = gql`

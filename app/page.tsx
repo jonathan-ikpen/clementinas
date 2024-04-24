@@ -14,39 +14,12 @@ import SectionNewsletter from "@/components/shared/section-newsletter";
 import InstagramEmbeds from "@/components/shared/section-instagram-embed";
 import client from "@/tina/__generated__/client";
 
-export default async function Home() {
-  const res = await client.queries.best_sellers({
-    relativePath: "palm_oil.json",
-  });
-  const navItems = [
-    {
-      name: "About Us",
-      link: "/about-us",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Store",
-      link: "/store",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Help Center",
-      link: "/contact-us",
-      icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
-    },
-  ];
-
+export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
       <SectionWeOffer />
-      <SectionBestSellers
-        data={res.data}
-        variable={res.variables}
-        query={res.query}
-      />
+      <SectionBestSellers />
       <SectionCategory />
       <SectionWeGuarantee />
       <SectionCustomerReviews />
