@@ -1,0 +1,16 @@
+{
+  "product": {
+    "name": "Palm Oil",
+    "src": "http://localhost:3000/products/palm-oil-2.svg",
+    "category": "Oils",
+    "price": "10,000",
+    "piece": "10 Qty +",
+    "link": "https://paystack.com/buy/cle-palm-oil"
+  },
+  "name": "Palm Oil",
+  "src": "http://localhost:3000/products/palm-oil-2.svg",
+  "category": "Oils",
+  "price": "10,000",
+  "piece": "10 Qty +",
+  "link": "https://paystack.com/buy/palm-oil"
+}

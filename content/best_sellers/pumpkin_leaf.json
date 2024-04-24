@@ -1,0 +1,16 @@
+{
+  "product": {
+    "name": "Pumpkin Leaf",
+    "src": "http://localhost:3000/products/pumpkin-leaf-2.svg",
+    "category": "Veges",
+    "price": "1,500",
+    "piece": "10 Qty +",
+    "link": "https://paystack.com/buy/cle-ugwu-leaf"
+  },
+  "name": "Pumpkin Leaf",
+  "src": "http://localhost:3000/products/pumpkin-leaf-2.svg",
+  "category": "Veges",
+  "price": "2,500",
+  "piece": "5 Qty +",
+  "link": "https://paystack.com/buy/ugwu"
+}
