@@ -1,9 +1,5 @@
 import Image from "next/image";
 import ProductCard from "./card-product";
-import {
-  Best_SellersQuery,
-  Best_SellersQueryVariables,
-} from "../../tina/__generated__/types";
 import client from "@/tina/__generated__/client";
 import { useTina, tinaField } from "tinacms/dist/react";
 
@@ -11,8 +7,6 @@ const SectionBestSellers = async () => {
   const response = await client.queries.best_sellersConnection();
   const bestSellersData =
     response.data.best_sellersConnection.edges?.map((edge) => edge?.node) || [];
-
-  console.log("All datas: ", bestSellersData);
 
   return (
     <section className="section-with-pb flex flex-col gap-16">

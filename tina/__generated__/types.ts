@@ -83,6 +83,8 @@ export type Query = {
   document: DocumentNode;
   best_sellers: Best_Sellers;
   best_sellersConnection: Best_SellersConnection;
+  announcement: Announcement;
+  announcementConnection: AnnouncementConnection;
 };
 
 
@@ -121,8 +123,24 @@ export type QueryBest_SellersConnectionArgs = {
   filter?: InputMaybe<Best_SellersFilter>;
 };
 
+
+export type QueryAnnouncementArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAnnouncementConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AnnouncementFilter>;
+};
+
 export type DocumentFilter = {
   best_sellers?: InputMaybe<Best_SellersFilter>;
+  announcement?: InputMaybe<AnnouncementFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -162,7 +180,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Best_Sellers | Folder;
+export type DocumentNode = Best_Sellers | Announcement | Folder;
 
 export type Best_Sellers = Node & Document & {
   __typename?: 'Best_sellers';
@@ -213,6 +231,44 @@ export type Best_SellersConnection = Connection & {
   edges?: Maybe<Array<Maybe<Best_SellersConnectionEdges>>>;
 };
 
+export type Announcement = Node & Document & {
+  __typename?: 'Announcement';
+  message?: Maybe<Scalars['String']['output']>;
+  discount?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  link?: Maybe<Scalars['String']['output']>;
+  display?: Maybe<Scalars['Boolean']['output']>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type BooleanFilter = {
+  eq?: InputMaybe<Scalars['Boolean']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type AnnouncementFilter = {
+  message?: InputMaybe<StringFilter>;
+  discount?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+  display?: InputMaybe<BooleanFilter>;
+};
+
+export type AnnouncementConnectionEdges = {
+  __typename?: 'AnnouncementConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Announcement>;
+};
+
+export type AnnouncementConnection = Connection & {
+  __typename?: 'AnnouncementConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<AnnouncementConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -221,6 +277,8 @@ export type Mutation = {
   createDocument: DocumentNode;
   updateBest_sellers: Best_Sellers;
   createBest_sellers: Best_Sellers;
+  updateAnnouncement: Announcement;
+  createAnnouncement: Announcement;
 };
 
 
@@ -262,13 +320,27 @@ export type MutationCreateBest_SellersArgs = {
   params: Best_SellersMutation;
 };
 
+
+export type MutationUpdateAnnouncementArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AnnouncementMutation;
+};
+
+
+export type MutationCreateAnnouncementArgs = {
+  relativePath: Scalars['String']['input'];
+  params: AnnouncementMutation;
+};
+
 export type DocumentUpdateMutation = {
   best_sellers?: InputMaybe<Best_SellersMutation>;
+  announcement?: InputMaybe<AnnouncementMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   best_sellers?: InputMaybe<Best_SellersMutation>;
+  announcement?: InputMaybe<AnnouncementMutation>;
 };
 
 export type Best_SellersMutation = {
@@ -280,7 +352,17 @@ export type Best_SellersMutation = {
   link?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type AnnouncementMutation = {
+  message?: InputMaybe<Scalars['String']['input']>;
+  discount?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+  display?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
 export type Best_SellersPartsFragment = { __typename: 'Best_sellers', name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null };
+
+export type AnnouncementPartsFragment = { __typename: 'Announcement', message?: string | null, discount?: string | null, button?: string | null, link?: string | null, display?: boolean | null };
 
 export type Best_SellersQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -301,6 +383,25 @@ export type Best_SellersConnectionQueryVariables = Exact<{
 
 export type Best_SellersConnectionQuery = { __typename?: 'Query', best_sellersConnection: { __typename?: 'Best_sellersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Best_sellersConnectionEdges', cursor: string, node?: { __typename: 'Best_sellers', id: string, name?: string | null, src?: string | null, category?: string | null, price?: string | null, piece?: string | null, link?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type AnnouncementQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type AnnouncementQuery = { __typename?: 'Query', announcement: { __typename: 'Announcement', id: string, message?: string | null, discount?: string | null, button?: string | null, link?: string | null, display?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type AnnouncementConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<AnnouncementFilter>;
+}>;
+
+
+export type AnnouncementConnectionQuery = { __typename?: 'Query', announcementConnection: { __typename?: 'AnnouncementConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AnnouncementConnectionEdges', cursor: string, node?: { __typename: 'Announcement', id: string, message?: string | null, discount?: string | null, button?: string | null, link?: string | null, display?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
 export const Best_SellersPartsFragmentDoc = gql`
     fragment Best_sellersParts on Best_sellers {
   __typename
@@ -310,6 +411,16 @@ export const Best_SellersPartsFragmentDoc = gql`
   price
   piece
   link
+}
+    `;
+export const AnnouncementPartsFragmentDoc = gql`
+    fragment AnnouncementParts on Announcement {
+  __typename
+  message
+  discount
+  button
+  link
+  display
 }
     `;
 export const Best_SellersDocument = gql`
@@ -367,6 +478,61 @@ export const Best_SellersConnectionDocument = gql`
   }
 }
     ${Best_SellersPartsFragmentDoc}`;
+export const AnnouncementDocument = gql`
+    query announcement($relativePath: String!) {
+  announcement(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AnnouncementParts
+  }
+}
+    ${AnnouncementPartsFragmentDoc}`;
+export const AnnouncementConnectionDocument = gql`
+    query announcementConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AnnouncementFilter) {
+  announcementConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AnnouncementParts
+      }
+    }
+  }
+}
+    ${AnnouncementPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -375,6 +541,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     best_sellersConnection(variables?: Best_SellersConnectionQueryVariables, options?: C): Promise<{data: Best_SellersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Best_SellersConnectionQueryVariables, query: string}> {
         return requester<{data: Best_SellersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Best_SellersConnectionQueryVariables, query: string}, Best_SellersConnectionQueryVariables>(Best_SellersConnectionDocument, variables, options);
+      },
+    announcement(variables: AnnouncementQueryVariables, options?: C): Promise<{data: AnnouncementQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AnnouncementQueryVariables, query: string}> {
+        return requester<{data: AnnouncementQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AnnouncementQueryVariables, query: string}, AnnouncementQueryVariables>(AnnouncementDocument, variables, options);
+      },
+    announcementConnection(variables?: AnnouncementConnectionQueryVariables, options?: C): Promise<{data: AnnouncementConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AnnouncementConnectionQueryVariables, query: string}> {
+        return requester<{data: AnnouncementConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: AnnouncementConnectionQueryVariables, query: string}, AnnouncementConnectionQueryVariables>(AnnouncementConnectionDocument, variables, options);
       }
     };
   }

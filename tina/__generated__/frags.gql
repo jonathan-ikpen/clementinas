@@ -7,3 +7,12 @@ fragment Best_sellersParts on Best_sellers {
   piece
   link
 }
+
+fragment AnnouncementParts on Announcement {
+  __typename
+  message
+  discount
+  button
+  link
+  display
+}

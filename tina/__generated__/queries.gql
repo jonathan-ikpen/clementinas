@@ -50,3 +50,56 @@ query best_sellersConnection($before: String, $after: String, $first: Float, $la
     }
   }
 }
+
+query announcement($relativePath: String!) {
+  announcement(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...AnnouncementParts
+  }
+}
+
+query announcementConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AnnouncementFilter) {
+  announcementConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...AnnouncementParts
+      }
+    }
+  }
+}

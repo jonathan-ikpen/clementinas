@@ -55,10 +55,13 @@ type Query {
   document(collection: String, relativePath: String): DocumentNode!
   best_sellers(relativePath: String): Best_sellers!
   best_sellersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Best_sellersFilter): Best_sellersConnection!
+  announcement(relativePath: String): Announcement!
+  announcementConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: AnnouncementFilter): AnnouncementConnection!
 }
 
 input DocumentFilter {
   best_sellers: Best_sellersFilter
+  announcement: AnnouncementFilter
 }
 
 type DocumentConnectionEdges {
@@ -84,7 +87,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Best_sellers | Folder
+union DocumentNode = Best_sellers | Announcement | Folder
 
 type Best_sellers implements Node & Document {
   name: String
@@ -132,6 +135,41 @@ type Best_sellersConnection implements Connection {
   edges: [Best_sellersConnectionEdges]
 }
 
+type Announcement implements Node & Document {
+  message: String
+  discount: String
+  button: String
+  link: String
+  display: Boolean
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
+input AnnouncementFilter {
+  message: StringFilter
+  discount: StringFilter
+  button: StringFilter
+  link: StringFilter
+  display: BooleanFilter
+}
+
+type AnnouncementConnectionEdges {
+  cursor: String!
+  node: Announcement
+}
+
+type AnnouncementConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [AnnouncementConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -139,15 +177,19 @@ type Mutation {
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updateBest_sellers(relativePath: String!, params: Best_sellersMutation!): Best_sellers!
   createBest_sellers(relativePath: String!, params: Best_sellersMutation!): Best_sellers!
+  updateAnnouncement(relativePath: String!, params: AnnouncementMutation!): Announcement!
+  createAnnouncement(relativePath: String!, params: AnnouncementMutation!): Announcement!
 }
 
 input DocumentUpdateMutation {
   best_sellers: Best_sellersMutation
+  announcement: AnnouncementMutation
   relativePath: String
 }
 
 input DocumentMutation {
   best_sellers: Best_sellersMutation
+  announcement: AnnouncementMutation
 }
 
 input Best_sellersMutation {
@@ -157,6 +199,14 @@ input Best_sellersMutation {
   price: String
   piece: String
   link: String
+}
+
+input AnnouncementMutation {
+  message: String
+  discount: String
+  button: String
+  link: String
+  display: Boolean
 }
 
 schema {

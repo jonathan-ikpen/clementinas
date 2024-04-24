@@ -5,6 +5,7 @@ import Footer from "@/components/shared/footer";
 import MobileHeaderNav from "@/components/shared/mobile-nav";
 import DesktopHeader from "@/components/shared/desktop-header";
 import AnnouncementBar from "@/components/shared/announcement-bar";
+import { client } from "@/tina/__generated__/client";
 
 // const inter = Inter({ subsets: ["latin"] });
 // import { Inter } from "next/font/google";
@@ -34,23 +35,26 @@ export const metadata: Metadata = {
   description: "Clementinas Farm",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const announce = await client.queries.announcement({
+    relativePath: "announcement.md",
+  });
+
   return (
     <html lang="en">
       <body className={satoshi.className + "overflow-x-hidden "}>
         <div className="bg-background w-full max-w-[1440px] mx-auto overflow-x-hidden">
           <AnnouncementBar
-            message={
-              "Next delivery of StrawBerry is monday, click anywhere here to"
-            }
-            discount={"book now"}
-            button={"buy now"}
-            link={"/store"}
-            display
+            message={announce.data.announcement.message ?? " "}
+            discount={announce.data.announcement.discount ?? " "}
+            button={announce.data.announcement.button ?? " "}
+            link={announce.data.announcement.link ?? " "}
+            display={announce.data.announcement.display ?? true}
+            data={announce.data}
           />
           <DesktopHeader />
           <MobileHeaderNav />

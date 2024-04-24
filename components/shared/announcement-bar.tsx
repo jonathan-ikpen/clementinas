@@ -1,6 +1,8 @@
 "use client";
+import { AnnouncementQuery } from "@/tina/__generated__/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { tinaField } from "tinacms/dist/react";
 
 export default function AnnouncementBar({
   message,
@@ -8,17 +10,22 @@ export default function AnnouncementBar({
   button,
   link,
   display,
+  data,
 }: {
   message: string;
   discount: string;
   button: string;
   link: string;
-  display?: true;
+  display?: boolean;
+  data: AnnouncementQuery;
 }) {
   const navigation = useRouter();
   return (
     <Link href={link}>
-      <div className={`ffixed inset-x-0 top-0 z-50 ${display ? "" : "hidden"}`}>
+      <div
+        className={`ffixed inset-x-0 top-0 z-50 ${display ? "" : "hidden"}`}
+        data-tina-field={tinaField(data, "announcement")}
+      >
         <div className="bg-accent">
           <div className="marquee md:animate-none mx-auto max-w-7xl py-1 md:py-3 px-3 sm:px-6 lg:px-8">
             <div className="flex w-fit mx-auto text-sm md:text-lg items-center flex-row justify-center">

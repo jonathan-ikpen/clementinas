@@ -85,11 +85,15 @@ export default defineConfig({
         name: "announcement",
         label: "Announcement",
         path: "content/announcement",
-        format: "json",
+        // format: "json",
         ui: {
           router: (props) => {
             return "/";
           },
+          // allowedActions: {
+          //   create: false,
+          //   delete: false,
+          // },
         },
         defaultItem: () => {
           return {
