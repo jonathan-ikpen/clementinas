@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SecondaryButton } from "./custom-button";
 
 const Hero = () => {
@@ -15,7 +16,9 @@ const Hero = () => {
         </p>
       </div>
       <div className="sm:w-fit w-full">
-        <SecondaryButton variant="secondary">Shop Now</SecondaryButton>
+        <SecondaryButton asChild variant="secondary">
+          <Link href="https://paystack.shop/clementinas-farm">Shop Now</Link>
+        </SecondaryButton>
       </div>
       <FloatingFruits />
     </section>

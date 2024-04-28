@@ -1,9 +1,9 @@
+import SectionTrainingIntro from "./_components/section-intro";
+
 export default function Training() {
   return (
     <main>
-      <div>
-        <h1>Still WOrking</h1>
-      </div>
+      <SectionTrainingIntro />
     </main>
   );
 }
