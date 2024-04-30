@@ -38,7 +38,15 @@ const CardInfo = ({
     <div className="h-full flex flex-col justify-between gap-4 p-6 rounded-2xl shadow-md ">
       {badge && <CardBadge>{badge}</CardBadge>}
       <div>
-        {image && <Image src={image} alt="Happy Investor" className="w-full" />}
+        {image && (
+          <Image
+            src={image}
+            width={100}
+            height={100}
+            alt={name}
+            className="w-full"
+          />
+        )}
       </div>
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-10">

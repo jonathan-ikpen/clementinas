@@ -258,3 +258,8 @@ At Clementina's Farm, our mission is simple: to provide you with the freshest, m
 We strive to offer unparalleled convenience and accessibility, so you can spend less time worrying about shopping and more time enjoying delicious meals with your loved ones. With Clementina's Farm, you can trust that every bite will be a moment worth savoring.
 
 With Clementina's Farm, you can sit back, relax, and focus on creating unforgettable moments with your loved ones, knowing that the freshness of our produce will elevate every dish.
+
+<!-- Bugs: -->
+
+1. Mobile Nav does not disappear on logo click
+2. Training Page Does not show still working
