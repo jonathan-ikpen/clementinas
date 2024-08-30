@@ -1,8 +1,8 @@
 ---
-message: 'Edible Worms and Tapioca is available for delivery, click anywhere here to '
-discount: order yours
-button: buy now
-link: 'https://paystack.com/buy/cle-edible-worm-and-tapioca'
-display: false
+message: 'We now have different Combo of Healthy Herbs and Spices, click here to '
+discount: visit our combo store
+button: shop now
+link: 'https://paystack.shop/clementinas-farm-healthy-box-combo'
+display: true
 ---
 
