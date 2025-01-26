@@ -1,8 +1,8 @@
 ---
-message: 'We now have different Combo of Healthy Herbs and Spices, click here to '
-discount: visit our combo store
-button: shop now
-link: 'https://paystack.shop/clementinas-farm-healthy-box-combo'
+message: Book yourself a sit at the life changing event happening
+discount: 22nd of march 2025
+button: book now
+link: 'https://paystack.com/buy/the-meet-up-2'
 display: true
 ---
 
